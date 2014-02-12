@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html  lang="en">
+
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="robots" content="noindex" />
+		<title>Dive into HTML5 - Geolocation</title>
+	</head>
+
+	<body>
+		<header id="page-header">
+			<!-- we make a GROUP of headers that are gonna be inside THIS header -->
+			<hgroup>
+				<h1>Dive into HTML5</h1>
+				<h2>The Geolocation</h2>
+			</hgroup>
+		</header>
+
+		<div id="out"></div>
+		<script type="text/javascript">
+
+			function show_map(position) {
+				alert("show_map function called");
+				var latitude = position.coords.latitude;
+				var longitude = position.coords.longitude;
+
+				alert("LATITUDE: " + latitude);
+				alert("LONGITUDE: " + longitude);
+				console.log("Latitude: " + latitude);
+				console.log("Longitude: " + longitude);
+			}
+
+			function alt_show_map(position) {
+
+				var output = document.getElementById("out");
+			    var latitude  = position.coords.latitude;
+			
+    			var longitude = position.coords.longitude;
+
+    			output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+
+    			var img = new Image();
+    			img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
+
+    			output.appendChild(img);
+			}
+
+			
+			function handle_error (error) {
+
+				switch(error) {
+
+					case 0:
+						// unknown error...
+						console.log("An unknown error has occured when trying to retreive your position");
+						break;
+
+					case 1:
+						// you don't have permission...
+						console.log("OK. You decide and I obbey");
+						break;
+
+					case 2:
+						// position unavailable...
+						console.log("Something went wrong when trying to retreive your position");
+						break;
+
+					case 3:
+						// timeout...
+						console.log ("Timeout when trying to retreive your coordinates");
+						break;
+				}
+			}
+
+
+			if ("geolocation" in navigator) {
+				console.log("Geolocation API is available");
+			} else {
+			  	console.warn("Geolocation API is NOT available");
+			}
+			var options = {
+				enableHighAccuracy: true,
+				timeout: 5000,
+				maximumAge: 0
+			};
+			/* Did you know?...
+				Geolocation only works in the Earth planet, since it's based in Geodetic System,
+				which is Earth-centric */
+			navigator.geolocation.getCurrentPosition(alt_show_map, handle_error, options);
+			/* if you needed to monitorize the user's position, you would use the "watchPosition()"
+				function instead of "getCurrentPosition()" ! */
+
+			
+		</script>
+	</body>
+
+
+</html>

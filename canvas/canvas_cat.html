@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html  lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="robots" content="noindex" />
+		<title>Dive into HTML5 - The Canvas</title>
+	</head>
+
+	<body>
+		<header id="page-header">
+			<!-- we make a GROUP of headers that are gonna be inside THIS header -->
+			<hgroup>
+				<h1>Dive into HTML5</h1>
+				<h2>The Canvas</h2>
+			</hgroup>
+		</header>
+
+		<img id="cat" src="img/cat.png" alt="sleeping cat" width="177" height="113"/>
+		<canvas id="e" width="177" height="113"></canvas>
+
+		<script type="text/javascript">
+			
+			window.onload = function() {
+				
+				var canvas = document.getElementById("e");
+				var context = canvas.getContext("2d");
+
+				var cat = document.getElementById("cat");
+				context.drawImage(cat, 0,0);
+			}
+
+		</script>
+	</body>
+
+</html>

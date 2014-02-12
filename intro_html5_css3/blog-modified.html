@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- Did you know? the DOCTYPE tag must be in the VERY FIRST line of your HTML doc? 
+	Even a blank line can cause some browsers to ignore it!!! -->
+
+<!-- by default html5 will check the same namespace: xmlns="http://www.w3.org/1999/xhtml",
+	so the "xmlns" attribute it's not necessary anymore... -->
+<!-- again, another useless attribute in html5: xml:lang="en", we can drop it from the scene... -->
+<html  lang="en">
+
+	<head>
+		<meta charset="utf-8" /> <!-- we've removed the ""http-equiv="Content-Type" content="text/html;"" from here...-->
+		<!-- Did you know? Not declaring the charset of a html document can lead your web to security vulnerabilites!! -->
+		<meta name="robots" content="noindex" />
+		<title>My Weblog</title>
+		<link rel="stylesheet"  href="style-original.css" /> <!-- the attribute ""type="text/css"" can be dropped in html5 -->
+		<link rel="alternate" type="application/atom+xml" title="My Weblog feed" href="/feed/" />
+		<link rel="search" type="application/opensearchdescription+xml" title="My Weblog search" href="opensearch.xml" />
+	</head>
+
+	<body>
+
+		<!-- tag header in html5... -->
+		<header id="page-header">
+			<!-- we make a GROUP of headers that are gonna be inside THIS header -->
+			<hgroup>
+				<h1>My Weblog</h1>
+				<h2>A lot of effort went into making this effortless.</h2>
+			</hgroup>
+		</header>
+			
+		<!-- navigation bar in HTML5...-->
+
+		<nav >
+			<ul>
+				<li><a href="#">home</a></li>
+				<li><a href="#">blog</a></li>
+				<li><a href="#">gallery</a></li>
+				<li><a href="#">about</a></li>
+			</ul>
+		</nav>
+		<!-- ok...this is an entry of the blog, we can make semantic sense to it by using the HTML5 tag "ARTICLE" -->
+		<article>
+			<!-- look out! this is the HEADER of the ARTICLE... -->
+			<!-- Did you know? in HTML5 each ARTICLE element creates a new node in the document, that is,
+				a new section...and each section can have its own H1 tag! -->
+				
+			<header>
+				<!-- in HTML5, we can give semantic value to the dates too (and even time!)...-->
+				<time datetime="2013-15-02T17:22:00-04:00" pubdate>February 15, 2013 17:22pm EDT</time>
+				<h1>
+					<a href="#" rel="bookmark" title="link to this post">Travel day</a>
+				</h1>
+			</header>
+			
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit felis accumsan turpis pretium tempor. Duis eu turpis nunc, ut euismod nisl. Aliquam erat volutpat. Proin eu eros mollis dui fringilla sodales. Curabitur venenatis tincidunt felis ac congue. Maecenas at odio dui, sit amet congue sapien. Proin placerat feugiat eros, non mollis quam pharetra at. Duis gravida eleifend ligula nec auctor. Fusce nulla diam, fringilla non ultrices in, iaculis eu tellus. Sed mollis consequat turpis sit amet facilisis. Donec pretium luctus aliquet. Curabitur placerat varius purus vel congue. Aliquam erat volutpat. Curabitur vitae eros sed turpis sollicitudin mattis. Morbi venenatis pulvinar nunc, at vulputate massa placerat a. Nam et tortor id nisi consequat tempor eget sit amet risus. Praesent bibendum, velit eu hendrerit porttitor, elit mauris posuere nisl, non pellentesque est leo a quam.</p>
+
+		</article>
+
+		<article>
+		
+			<header>
+				<time datetime="2013-17-02T17:30:00-04:00" pubdate>February 15, 2013 17:22pm EDT</time>
+				<h1>
+					<a href="#" rel="bookmark" title="link to this post">I'm going to Prague!</a>
+				</h1>
+			</header>
+			
+			<p>Sed ante mi, sagittis sed euismod sit amet, convallis et nibh. Etiam sit amet odio dui, id semper turpis. Mauris risus mauris, imperdiet pulvinar vehicula et, hendrerit vitae dui. Phasellus ultrices lacus rhoncus purus posuere rutrum. Maecenas mattis eleifend scelerisque. Nulla quam sem, facilisis ac ultrices et, tincidunt eu dolor. Mauris arcu est, porttitor eu blandit nec, pulvinar sed enim. Praesent diam felis, cursus at facilisis eu, mollis ut elit. Praesent rutrum porta euismod. Nulla facilisi. Suspendisse potenti. In auctor ultricies eleifend. Proin erat dolor, malesuada non tempus nec, tincidunt in mi.</p>
+
+		</article>
+
+		
+
+		<section id="blogEntries">
+			<p>&#167;</p>
+			<h1>Blog entries</h1>
+			<ul>
+				<li>
+					<time>October,&nbsp;5&nbsp;-&nbsp;</time> <a href="#">Vos vestros servate, meos mihi linquite mores</a>
+				</li>
+
+				<li>
+					<time>September,&nbsp;30&nbsp;-&nbsp;</time> <a href="#">Ut sementem feceris ita metes</a>
+				</li>
+
+				<li>
+					<time>August,&nbsp;4&nbsp;-&nbsp;</time> <a href="#">Risu inepto res ineptior nulla est</a>
+				</li>
+
+				<li>
+					<time>July,&nbsp;6&nbsp;-&nbsp;</time> <a href="#">Vitanda est improba siren desidia</a>
+				</li>
+
+				<li>
+					<time>April,&nbsp;21&nbsp;-&nbsp;</time> <a href="#">Mendacem oportet esse memorem</a>
+				</li>
+
+				<li>
+					<time>March,&nbsp;7&nbsp;-&nbsp;</time> <a href="#">Libenter homines id quod volunt credunt</a>
+				</li>
+
+				<li>
+					<time>March,&nbsp;27&nbsp;-&nbsp;</time> <a href="#">Gutta cavat lapidem</a>
+				</li>
+			
+				<li>
+					<time>March,&nbsp;21&nbsp;-&nbsp;</time> <a href="#">Amoto quaeramus seria ludo</a>
+				</li>
+
+				<li>
+					<time>March,&nbsp;18&nbsp;-&nbsp;</time> <a href="#">Non est ars quae ad effectum casu venit</a>
+				</li>
+
+				<li>
+					<time>January,&nbsp;11&nbsp;-&nbsp;</time> <a href="#">Quid rides?...De te fabula narratur</a>
+				</li>
+			</ul>
+		</section>
+
+		<!-- the FOOTER section in HTML5... -->
+		<footer>
+
+			<p>&#167;</p>
+
+			<p>
+				&#169; 2001&#8211;13 
+				<a href="#">Mark Pilgrim</a>
+				&nbsp;
+				<a href="http://twitter.com/cineexin">Migue Guillam&oacute;n</a>
+			</p>
+		</footer>
+
+	</body>
+</html>
+
+

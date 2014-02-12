@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html  lang="en">
+
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="robots" content="noindex" />
+		<title>Dive into HTML5 - Forms</title>
+	</head>
+
+	<body>
+		<header id="page-header">
+			<hgroup>
+				<h1>Dive into HTML5</h1>
+				<h2>Forms</h2>
+			</hgroup>
+		</header>
+
+		<form>
+			<!-- example of the useful "placeholder" attribute in text boxes -->
+			<!-- "autofocus" attribute will tell us where to put the cursor when
+				the page is loaded...this is not always a good idea (for example,
+				for people with special needs like blind people, it can confuse them rather
+				than help them...) -->
+			<input name="q" placeholder="Search Bookmarks and History" autofocus />
+			<!-- note that browsers won't crash if they don't support 
+				email inputs yet... 100% backwards compatibility! -->
+			<input name="email" type="email" placeholder="yourmail@yourdomain.com"/>
+			<input name="url" type="url" placeholder="your webpage"/>
+
+			<!-- numbers as spinboxes... -->
+			<!-- min: minimum acceptable value
+				max: maximum acceptable value
+				step: acceptable numbers in the range (the default step value is 1)
+				value: the default value 
+				note: at the time i'm writting this, Firefox doesn't validate this type of field
+					and doesn't render it with spinboxes like, for example, Chromium do :-( -->
+			<input name="number" type="number" min="0" max="10" step="2" value="6" />
+
+			<!-- numbers as sliders...-->
+			<!-- note: at the time i'm writting this, Firefox and Chromium renders this OK :-) -->
+			<input name="another_number" type="range" min="0" max="10" step="2" value="6" />
+
+			<!-- dates.. -->
+			<!-- note: at the thime i'm writting this, Firefox doesn't render it, 
+				unlike Chromium, that renders it fantastically :-( -->
+			<input name ="a_date" type="date" />
+			<!-- note: this field doesn't render in Chromium nor Firefox -->
+			<input name ="a_date_with_time" type="datetime" />
+			<!-- note: Chromium renders it OK, unlike Firefox :-( -->
+			<input name ="a_month" type="month" />
+			<!-- note: Chromium renders it OK, unlike Firefox :-( -->
+			<input name="a_week" type="week" />
+			<!-- note: Chromium renders it in a fancy way, unlike Firefox, that just shows a sad textbox :-( -->
+			<input name="time" type="time" />
+
+
+			<!-- search boxes..-->
+			<!-- note: at the time i'm writting this, Chromium uses the "x" to clear
+				the text when you type, Firefox doesn't do...except for this...nothing more...
+				some urban legends say that Safari renders it with rounded corners...wow!!!-->
+			<input name="a_search" type="search" />
+
+			<!-- color pickers...-->
+			<!-- note: at the time i'm writting this, Chromium shows us a fancy selector, unlike 
+				Firefox, that shows us a sad plain textbox :-( -->
+			<input type="color" />
+			<input type="submit" value="Submit form" />
+		</form>
+	</body>
+
+
+</html>

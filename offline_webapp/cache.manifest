@@ -1,0 +1,11 @@
+NETWORK:
+/tracking.cgi
+
+CACHE:
+/clock.css
+/clock.js
+/clock-face.jpg
+
+FALLBACK:
+/offline.html
+

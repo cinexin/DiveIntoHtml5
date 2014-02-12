@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html  lang="en">
+
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="robots" content="noindex" />
+		<title>Dive into HTML5 - Web Storage</title>
+	</head>
+
+	<body>
+		<header id="page-header">
+			<!-- we make a GROUP of headers that are gonna be inside THIS header -->
+			<hgroup>
+				<h1>Dive into HTML5</h1>
+				<h2>Web Storage</h2>
+			</hgroup>
+		</header>
+
+		<script type="text/javascript">
+
+			/* this function detects if the browser supports html5 storage data...*/
+			function supports_html5_storage() {
+				// you could check it by using Modernizr library too...
+				return ('localStorage' in window) && window['localStorage'] !== null;
+			}
+
+		</script>
+	</body>
+
+
+</html>
